@@ -1,4 +1,4 @@
-package org.cardozo.clase1;
+package Clase_2;
 
 public class P2imprimirdatos {
 
