@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTest extends  BaseTest {
+public class LoginInvalido extends BaseTest {
 
     @Test
-    public void loginTest() {
+    public void loginInvalidoTest() {
         // Paso 1: levantar la pagina
         getDriver().get("https://opencart.abstracta.us/");
 
@@ -31,15 +31,14 @@ public class LoginTest extends  BaseTest {
         WebElement inputPassEl = getDriver().findElement(inputPassBy);
         WebElement buttonLoginEl = getDriver().findElement(buttonLoginBy);
 
-        inputEmailEl.sendKeys("emic_15@hotmail.com");
-        inputPassEl.sendKeys("1234");
+        inputEmailEl.sendKeys("emic_08@hotmail.com");
+        inputPassEl.sendKeys("4321");
         buttonLoginEl.click();
 
         // Paso 5: validaciones
-        By titleBy = By.xpath("//h2[text()=\"My Account\"]");
-        WebElement titleEl = getDriver().findElement(titleBy);
+        By warningBy = By.xpath("//div[@class=\"alert alert-danger alert-dismissible\"]");
+        WebElement warningEl = getDriver().findElement(warningBy);
 
-        Assert.assertTrue(titleEl.isDisplayed());
+        Assert.assertTrue(warningEl.isDisplayed());
     }
-
 }
