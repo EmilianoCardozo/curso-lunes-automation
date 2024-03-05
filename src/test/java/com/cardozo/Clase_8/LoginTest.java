@@ -1,5 +1,9 @@
 package com.cardozo.Clase_8;
 
+import com.cardozo.Pages.HomePage;
+import com.cardozo.Pages.LoginPage;
+import com.cardozo.Pages.MyAccountPage;
+import com.cardozo.Pages.RegisterPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,6 +14,7 @@ public class LoginTest extends  BaseTest {
 
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage = new LoginPage(getDriver());
+        RegisterPage registerPage = new RegisterPage(getDriver());
         MyAccountPage myAccountPage = new MyAccountPage(getDriver());
 
         // Paso 1: levantar la pagina
